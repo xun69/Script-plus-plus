@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bgqpg88bda0vd"]
+
+[node name="ScriptListBtns" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="newBtn" type="Button" parent="HBox"]
+layout_mode = 2
+tooltip_text = "新建"
+text = "+"
+
+[node name="newBtn2" type="Button" parent="HBox"]
+layout_mode = 2
+tooltip_text = "关闭"
+text = "×"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+position = Vector2i(200, 200)
+dialog_text = "哈哈哈"
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+size = Vector2i(100, 123)
+visible = true
+dialog_text = "哈哈哈"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AcceptDialog"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 92.0
+offset_bottom = 74.0
+
+[node name="LineEdit" type="LineEdit" parent="AcceptDialog/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="AcceptDialog/VBoxContainer"]
+layout_mode = 2
+text = "123"

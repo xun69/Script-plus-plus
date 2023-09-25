@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[ScriptName]</title>
+    <link rel="stylesheet" href="[file_name]_files/atom-one-light.min.css">
+    <script src="[file_name]_files/highlight.min.js"></script>
+    <style>
+        .c{width:70%;margin: 0px auto;border: 1px solid #ccc;padding: 10px;background-color: #fff;}
+        body{background-color: #eee;}
+        @media print {
+            body{background-color: #fff;}
+            .c{width:100%;margin:0px;border: none;padding: 0px;background-color: #fff;}
+        }
+    </style>
+</head>
+<body>
+    <div class="c">
+        <h1>[ScriptName]</h1>
+        文档创建时间：[doc_export_time]
+        <hr>
+        <h2>源代码</h2>
+        <p>以下是全部的源代码</p>
+<pre><code class="language-swift">
+[source_code]
+</code></pre>
+    </div>
+    
+
+<script>
+    hljs.highlightAll();
+</script>
+</body>
+</html>

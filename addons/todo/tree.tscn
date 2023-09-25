@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxyn4jx3y5v8w"]
+
+[ext_resource type="Script" path="res://addons/todo/tree.gd" id="1_6o0fa"]
+
+[node name="Tree" type="Tree"]
+offset_right = 208.0
+offset_bottom = 182.0
+script = ExtResource("1_6o0fa")
+
+[connection signal="check_propagated_to_item" from="." to="." method="_on_check_propagated_to_item"]
+[connection signal="item_selected" from="." to="." method="_on_item_selected"]

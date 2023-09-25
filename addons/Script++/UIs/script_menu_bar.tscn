@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg5ttptvj324w"]
+
+[ext_resource type="Script" path="res://addons/Script++/UIs/script_menu_bar.gd" id="1_dygwn"]
+
+[node name="ScriptMenuBar" type="MenuBar"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("1_dygwn")
+
+[node name="[插入]" type="PopupMenu" parent="."]
+title = "注释"
+item_count = 3
+item_0/text = "元信息注释"
+item_0/id = 0
+item_1/text = "分割线注释"
+item_1/id = 1
+item_2/text = "等待施工"
+item_2/id = 2
+
+[node name="[导出]" type="PopupMenu" parent="."]
+title = "注释"
+item_count = 4
+item_0/text = "HTML"
+item_0/id = 0
+item_1/text = "MarkDown"
+item_1/id = 1
+item_2/text = ""
+item_2/id = 3
+item_2/separator = true
+item_3/text = "当前文档"
+item_3/id = 2
+
+[node name="[创建]" type="PopupMenu" parent="."]
+title = "注释"
+item_count = 3
+item_0/text = "EditorScript"
+item_0/id = 0
+item_1/text = "Resource"
+item_1/id = 1
+item_2/text = ""
+item_2/id = 2
+item_2/separator = true
+
+[node name="txts" type="PopupMenu" parent="[创建]"]
+item_count = 10
+item_0/text = "txt"
+item_0/id = 0
+item_1/text = "md"
+item_1/id = 1
+item_2/text = "cfg"
+item_2/id = 2
+item_3/text = "ini"
+item_3/id = 3
+item_4/text = "log"
+item_4/id = 4
+item_5/text = "json"
+item_5/id = 5
+item_6/text = "yml"
+item_6/id = 6
+item_7/text = "yaml"
+item_7/id = 7
+item_8/text = "toml"
+item_8/id = 8
+item_9/text = "xml"
+item_9/id = 9
+
+[node name="docs" type="PopupMenu" parent="[创建]"]
+item_count = 3
+item_0/text = "Word文档(.docx)"
+item_0/id = 0
+item_1/text = "PPT文档(.pptx)"
+item_1/id = 1
+item_2/text = "excel文件(.xlsx)"
+item_2/id = 2
+
+[connection signal="index_pressed" from="[插入]" to="." method="_on_insert_menu_index_pressed"]
+[connection signal="index_pressed" from="[导出]" to="." method="_on_export_menu_index_pressed"]
+[connection signal="index_pressed" from="[创建]" to="." method="_on_creat_menu_index_pressed"]
+[connection signal="index_pressed" from="[创建]/txts" to="." method="_on_txts_index_pressed"]
